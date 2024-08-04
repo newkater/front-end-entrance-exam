@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("education-item", "education-item-common");
 
         const timeline = document.createElement("div");
-        timeline.classList.add("education-timeline");
+        timeline.classList.add("education-timeline", "edit");
         timeline.textContent = education.timeline;
 
         const content = document.createElement("div");
         content.classList.add("education-content");
 
         const header = document.createElement("div");
-        header.classList.add("education-header");
+        header.classList.add("education-header", "edit");
         header.textContent = education.header;
 
         const tagsContainer = document.createElement("div");
@@ -42,12 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         education.tags.forEach(tag => {
             const tagElement = document.createElement("div");
+            tagElement.classList.add("edit");
             tagElement.textContent = `#${tag}`;
             tagsContainer.appendChild(tagElement);
         });
 
         const institution = document.createElement("div");
-        institution.classList.add("education-institution");
+        institution.classList.add("education-institution", "edit");
         institution.textContent = education.institution;
 
         content.appendChild(header);

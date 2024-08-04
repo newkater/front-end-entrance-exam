@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
             timeline: "2017-2019",
             header: "UI/UX",
             tags: ["UX", "UI", "research", "wireframing", "figma"],
-            institution: "Coursera"
-        }
+            institution: "Coursera",
+        },
     ];
 
     const educationList = document.getElementById("education-list");
