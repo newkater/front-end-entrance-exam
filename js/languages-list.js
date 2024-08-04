@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         listItem.classList.add("languages-list-item");
 
         const languageName = document.createElement("div");
+        languageName.classList.add("edit");
         languageName.textContent = language.name;
 
         const proficiencyBar = document.createElement("div");

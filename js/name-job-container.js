@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     nameJobDiv.classList.add("name-job");
 
     const nameDiv = document.createElement("div");
-    nameDiv.classList.add("name");
+    nameDiv.classList.add("name", "edit");
     nameDiv.textContent = person.name;
 
     const jobDiv = document.createElement("div");
-    jobDiv.classList.add("job");
+    jobDiv.classList.add("job", "edit");
     jobDiv.textContent = person.job;
 
     nameJobDiv.appendChild(nameDiv);

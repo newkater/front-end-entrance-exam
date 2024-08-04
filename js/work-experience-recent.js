@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         recentTimeline.classList.add("position-timeline", "position-timeline-recent");
         
         const timeline = document.createElement("div");
+        timeline.classList.add("edit");
         timeline.textContent = `${experience.startDate} - ${experience.endDate}`;
 
         const mostRecent = document.createElement("div");
@@ -34,11 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
         jobInfo.classList.add("position-jobinfo");
 
         const jobTitle = document.createElement("div");
-        jobTitle.classList.add("position-title");
+        jobTitle.classList.add("position-title", "edit");
         jobTitle.textContent = experience.jobTitle;
 
         const aboutJob = document.createElement("div");
-        aboutJob.classList.add("position-aboutjob-recent");
+        aboutJob.classList.add("position-aboutjob-recent", "edit");
         aboutJob.textContent = experience.company ? `${experience.company} | ${experience.position}` : `${experience.position}`;
 
         jobInfo.appendChild(jobTitle);
@@ -49,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         experience.descriptions.forEach(description => {
             const listItem = document.createElement("li");
+            listItem.classList.add("edit");
             listItem.textContent = description;
             descriptions.appendChild(listItem);
         });

@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
             startDate: "January 2018",
             endDate: "May 2018",
             descriptions: ["Provide administrative support to lawyer and enhance office effectiveness",
-                "Handle communication with clients, witnesses etc.;Prepare case briefs and summarize depositions, interrogatories and testimony"]
+                "Handle communication with clients, witnesses etc.",
+                "Prepare case briefs and summarize depositions, interrogatories and testimony"]
         }
     ];
 
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         block.classList.add("experience-block", "experience-block-common");
 
         const timeline = document.createElement("div");
-        timeline.classList.add("position-timeline");
+        timeline.classList.add("position-timeline", "edit");
         timeline.textContent = `${experience.startDate} - ${experience.endDate}`;
 
         const content = document.createElement("div");
@@ -37,11 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
         jobInfo.classList.add("position-jobinfo");
 
         const jobTitle = document.createElement("div");
-        jobTitle.classList.add("position-title");
+        jobTitle.classList.add("position-title", "edit");
         jobTitle.textContent = experience.jobTitle;
 
         const aboutJob = document.createElement("div");
-        aboutJob.classList.add("position-aboutjob");
+        aboutJob.classList.add("position-aboutjob", "edit");
         aboutJob.textContent = experience.company ? `${experience.company} | ${experience.position}` : `${experience.position}`;
 
         jobInfo.appendChild(jobTitle);
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         experience.descriptions.forEach(description => {
             const listItem = document.createElement("li");
             listItem.textContent = description;
+            listItem.classList.add("edit");
             descriptions.appendChild(listItem);
         });
 

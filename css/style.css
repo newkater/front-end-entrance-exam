@@ -99,6 +99,11 @@ button:focus-visible {
   }
 }
 
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 .title {
   font-family: Poppins;
   font-size: 2vw;
@@ -240,6 +245,7 @@ button:focus-visible {
   justify-content: space-between;
   align-items: start;
   background-color: #F0F0F0;
+  height: max-content;
 }
 
 .experience-block {
@@ -323,5 +329,142 @@ button:focus-visible {
   font-weight: 400;
   text-align: left;
 }
+
+
+/*-----------------------------------Tools------------------------------------*/
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #F0F0F0;
+}
+
+.tools-list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tools-block {
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  padding: 0.3vw 1vw 1vw 1vw;
+  margin: 1vw;
+  text-align: center;
+  align-self: center;
+  width: 60%;
+}
+
+.tools-header {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 1vw;
+  margin-bottom: 1vw;
+  font-family: Poppins;
+  font-weight: 500;
+}
+
+.icons-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1vw;
+  justify-items: center;
+}
+
+.icon {
+  width: 50%;
+  max-width: 500px;
+}
+
+/*--------------------------------------------Education----------------------------------------*/
+
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #F0F0F0;
+  height: max-content;
+}
+
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2vw;
+  width: 100%;
+  justify-items: center;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: left space-between;
+  border-radius: 10px;
+  text-align: left;
+  padding: 12px;
+  width: calc(100% - 24px);
+  height: max-content;
+}
+
+.education-item-common {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.education-item-recent {
+  background-color: #28D979;
+  color: #FFFFFF;
+}
+
+.education-timeline {
+  font-family: Poppins;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.education-header {
+  font-family: Poppins;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.education-tags {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5vw;
+  font-family: Poppins;
+  font-size: 1vw;
+  font-weight: 400;
+}
+
+.education-tags-common {
+  color: #149063;
+}
+
+.education-tags-recent {
+  color: #EBF9F2;
+}
+
+.education-institution {
+  font-family: Poppins;
+  font-size: 1vw;
+  font-weight: 400;
+}
+
+
+
 
 
