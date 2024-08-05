@@ -22,9 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const educationList = document.getElementById("education-list");
 
-    educationData.forEach(education => {
+    educationData.forEach((education, index) => {
         const item = document.createElement("div");
-        item.classList.add("education-item", "education-item-common");
+       
+        if (index === 0) {
+            item.classList.add("education-item", "education-item-recent");
+        } else {
+            item.classList.add("education-item", "education-item-common");
+        }
 
         const timeline = document.createElement("div");
         timeline.classList.add("education-timeline", "edit");
@@ -38,7 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
         header.textContent = education.header;
 
         const tagsContainer = document.createElement("div");
-        tagsContainer.classList.add("education-tags", "education-tags-common");
+        
+        if (index === 0) {
+            tagsContainer.classList.add("education-tags", "education-tags-recent");
+        } else {
+            tagsContainer.classList.add("education-tags", "education-tags-common");
+        }
 
         education.tags.forEach(tag => {
             const tagElement = document.createElement("div");
@@ -61,3 +71,4 @@ document.addEventListener("DOMContentLoaded", () => {
         educationList.appendChild(item);
     });
 });
+ 
