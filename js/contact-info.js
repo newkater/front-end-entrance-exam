@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const contact = {
         title: "Let´s chat! I´m ready to work on excinting projects",
-        email: "srkarthik.designscape@gmail.com"
+        email: "srkarthik.designscape@gmail.com",
     };
 
     const profileContainer = document.getElementById("contact-info");
